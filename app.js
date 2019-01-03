@@ -34,4 +34,36 @@ let filterer = (arr, cb)=>{
 
 
 // forLoop(arr);
-whileLoop(arr);
+// whileLoop(arr);
+
+
+
+const people = ['Kookla','Fran','Ollie'];
+let newPeople =['Odie', ...people, 'Garfield'];
+
+
+const stuff = {
+  tv: 'huge',
+  radio: 'old',
+  toothbrush: 'frayed',
+  cars: ['Toyota','Mazda']
+}
+
+let {tv,radio,toothbrush,cars} =stuff;
+
+const sate ={
+    people: let {}
+    stuff: 
+}
+
+
+
+// const newStuff = {//dont remember how to destructure
+
+// }
+
+let state = {};
+
+const newStuff = {tv,radio, toothbrush, cars};
+console.log(newStuff);
+let newState = {};
