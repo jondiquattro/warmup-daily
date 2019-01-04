@@ -17,19 +17,7 @@ function whileLoop(arr){
     }
 }
 
-function map(arr){
-    const result = [];
-    for( let i =0; i<arr.length; i++){
-    result.push(cb=()=>{})
-    }
-}
-let filterer = (arr, cb)=>{
-    const result= [];
-    for(let i=0; i< arr.length; i++){
-        if(cb(arr[i], i)){result.push(arr[i])};
-        return result;
-    }
-}
+
 //map takes in an array and returns an arrray with the results of a cb method
 
 
@@ -51,10 +39,7 @@ const stuff = {
 
 let {tv,radio,toothbrush,cars} =stuff;
 
-const sate ={
-    people: let {}
-    stuff: 
-}
+
 
 
 
