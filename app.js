@@ -1,54 +1,31 @@
 'use strict';
 const arr = [1,2,3,4,5,6,7,8,9,10];
 
-function forLoop(arr){
-    for(let i =0; i<arr.length; i++){
-        console.log(arr[i])
+
+for(let i =0; i<arr.length; i++){
+    console.log(arr[i])
+}
+
+
+let count = 0;
+while(count <= arr.length-1){
+    console.log(arr[count]);
+    count ++;
+}
+
+const result = words.filter(word => word.length > 6)
+
+function arrFilter (idx, cb, arr){
+for(let i = 0; i< arr.length; i++){
+    const result = [];
+    if(cb(arr[i]) === true){
+        result.push(arr[i])
     }
+    return result;
+}
 }
 
 
 
-function whileLoop(arr){
-   let count = 0;
-    while(count <= arr.length-1){
-        console.log(arr[count])
-        count ++;
-    }
-}
 
 
-//map takes in an array and returns an arrray with the results of a cb method
-
-
-// forLoop(arr);
-// whileLoop(arr);
-
-
-
-const people = ['Kookla','Fran','Ollie'];
-let newPeople =['Odie', ...people, 'Garfield'];
-
-
-const stuff = {
-  tv: 'huge',
-  radio: 'old',
-  toothbrush: 'frayed',
-  cars: ['Toyota','Mazda']
-}
-
-let {tv,radio,toothbrush,cars} =stuff;
-
-
-
-
-
-// const newStuff = {//dont remember how to destructure
-
-// }
-
-let state = {};
-
-const newStuff = {tv,radio, toothbrush, cars};
-console.log(newStuff);
-let newState = {};
