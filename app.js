@@ -1,47 +1,46 @@
-'use strict';
-const arr = [1,2,3,4,5,6,7,8,9,10];
+'use strict'
 
+let arr = ['1','2','3','4','5','6','7','8'];
 
-for(let i =0; i<arr.length; i++){
-    console.log(arr[i])
-}
-
-
-let count = 0;
-while(count <= arr.length-1){
-    console.log(arr[count]);
-    count ++;
-}
-
-const result = words.filter(word => word.length > 6)
-
-function arrFilter (idx, cb, arr){
-for(let i = 0; i< arr.length; i++){
-    const result = [];
-    if(cb(arr[i]) === true){
-        result.push(arr[i])
+let forLoop = (arr) => {
+    for(let number in arr){
+        // console.log(number);
     }
-    return result;
-}
 }
 
-// Accumulator (acc)
-// Current Value (cur)
-// Current Index (idx)
-// Source Array (src)
-
-
-function reduce(acc, cur, idx,cb=()=>{
-    const arr = [1,2,3,4,5,6]
-    for(let i = 0; i<arr.length; i++){
-        acc = acc+acc;
-        cur = arr[i];
-        idx = i;
+let whileLoop = (arr) => {
+    let i = 0;
+    while(i < arr.length){
+        // console.log(arr[i]);
+        i++;
     }
-}){
-const redArr = [1,2,3,4,5];
-
-
-
 }
 
+
+  
+function map (arr, cb){
+  let result = [];
+  for (let i = 0; i<arr.length;i++){
+    result.push(cb(arr[i]));
+  }
+}
+
+map(arr,(idx=>{
+  console.log(idx);
+}))
+
+function reduce(arr, acc, cur,idx,cb){
+  
+  for(let i = 0; i<arr.length; i++){
+
+   return cb( idx=>{
+      acc = arr[i-1]+arr[i];
+      cur = arr[i];
+      idx = i;
+    })
+
+  }
+}
+
+let x = reducer(arr,0,0);
+console.log(x);
