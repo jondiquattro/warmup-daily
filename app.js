@@ -23,11 +23,12 @@ do{
 }
 while(count<20);
 
-
+//some stuff
 
 //---------------------------------------//
 
 const people = ['Kookla','Fran','Ollie'];
+const x = 2;
 
 const newPeople =['Odie', ...people, 'Garfield'];
 console.log(newPeople);
