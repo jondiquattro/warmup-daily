@@ -26,7 +26,7 @@ while(count<20);
 //some stuff
 
 //---------------------------------------//
-
+//changes just to push
 const people = ['Kookla','Fran','Ollie'];
 
 const newPeople =['Odie', ...people, 'Garfield'];
