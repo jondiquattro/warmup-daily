@@ -1,38 +1,38 @@
-'use strict'
+'use strict';
 
-let arr = ['1','2','3','4','5','6','7','8','9','10'];
+const arr = [1,2,3,4,5,6,7,8,9,10];
 
-for(let i in arr){
-  console.log(arr[i]);
+// traditional
+for(let i = 0; i<arr.length; i++){
+  console.log(`traditional for loop ${arr[i]}`);
 }
 
-for(let i =0; i<arr.length; i++){
-  console.log('traditional for loop ',arr[i]);
+for (let i in arr){
+  console.log(`non traditional ${arr[i]}`)
 }
 
+let idx = 0;
 
-let count = 0;
-while(count < arr.length){
-  console.log('traditional while loop',arr[count]);
-  count ++;
+while(idx<10){
+  console.log(`while loop ${arr[idx]}`);
+  idx ++;
 }
 
-do{
-  console.log('do while loop', arr[count - 10])
-  count ++;
+do {
+  console.log(`do while ${arr[idx - 10]}`);
+  idx ++;
 }
-while(count<20);
+while(idx<20);
 
-//some stuff
 
-//---------------------------------------//
-//changes just to push
+//------------Objects--------------//
+
 const people = ['Kookla','Fran','Ollie'];
 
-const newPeople =['Odie', ...people, 'Garfield'];
-console.log(newPeople);
 
-//-------------------//
+const newPeople = ['Odie',...people,'Garfield'];
+// console.log(newPeople);
+
 const stuff = {
   tv: 'huge',
   radio: 'old',
@@ -40,13 +40,17 @@ const stuff = {
   cars: ['Toyota','Mazda']
 }
 
-const  {tv,radio,toothbrush,cars}=stuff;
+const {tv,radio,toothbrush, cars} = stuff;
 
-cars.push('Porsche')
-const newStuff = stuff;
+cars.push('new Car');
 
-console.log(newStuff);
+// console.log(stuff);
 
+const state ={people: people, stuff: stuff};
 
-let state = {people: [...people], stuff: stuff};
-console.log('state',state);
+const newState={people: ['new Odie', ...state.people, 'new Garfield'],
+stuff: state.stuff,
+}
+
+console.log(newState);
+
