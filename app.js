@@ -1,20 +1,23 @@
 'use strict';
 
 const arr = [1,2,3,4,5,6,8,9];
-const ages =[1,2,3,4,5,6,7]
+const ages =[1,2,3,4,5,6,7,8,9]
 
 // traditional
 for(let i = 0; i<arr.length; i++){
+
   // console.log(`traditional for loop ${arr[i]}`);
 }
 
 for (let i in arr){
+
   // console.log(`non traditional ${arr[i]}`)
 }
 
 let idx = 0;
 
 while(idx<10){
+
   // console.log(`while loop ${arr[idx]}`);
   idx ++;
 }
@@ -24,13 +27,13 @@ do {
   idx ++;
 }
 while(idx<20);
+
 //------------Arrays---------------//
 
 
 //map applies a call back to each index and returns an array of all the results
 function map(arr, cb){
   const mapArr =[];
-
   for (let i in arr){
     mapArr.push(cd(arr[i]));
   }
@@ -46,6 +49,7 @@ function filter (arr,cb){
   for(let i in arr){
     if(cb(arr[i])){
       filterArr.push(arr[i]);
+
     }
   }
   console.log(filterArr);
@@ -62,12 +66,14 @@ function reduce (arr, cb){
 let accumulator = null;
 
 for(let i in arr){
+
   accumulator = cb(accumulator, arr[i]);
 }
 console.log(accumulator);
 return accumulator;
 
 }
+
 function cbReduce(total, num){
 return total + num;
 }
