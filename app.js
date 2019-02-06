@@ -6,7 +6,7 @@ const ages =[1,2,3,4,5,6,7,8,9]
 // traditional
 for(let i = 0; i<arr.length; i++){
 
-  // console.log(`traditional for loop ${arr[i]}`);
+  console.log(`traditional for loop ${arr[i]}`);
 }
 
 for (let i in arr){
@@ -40,7 +40,9 @@ function map(arr, cb){
 
 }
 
+// map(ages,()=>{
 
+// });
 //filter applies a cb containing a test, and returns each element that passes the test
 
 function filter (arr,cb){
@@ -58,8 +60,6 @@ function filter (arr,cb){
 
 
 filter(arr,age=>age>3);
-
-
 
 //reduce applies a call back on each element and returns an accumulated result of that cb
 function reduce (arr, cb){
@@ -89,17 +89,13 @@ const people = ['Kookla','Fran','Ollie'];
 const newPeople = ['Odie',...people,'Garfield'];
 
 console.log(newPeople);
-
 const stuff = {
   tv: 'huge',
   radio: 'old',
   toothbrush: 'frayed',
   cars: ['Toyota','Mazda']
 }
-
 const {tv,radio,toothbrush, cars} = stuff;
-
-
 cars.push('new Car');
 
 // console.log(stuff);
@@ -112,4 +108,8 @@ stuff: state.stuff,
 }
 
 // console.log(newState);
+
+
+
+
 
