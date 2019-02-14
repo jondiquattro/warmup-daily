@@ -1,30 +1,30 @@
 'use strict';
 
-const arr = [1,2,3,4,5,6,8,9];
-const ages =[1,2,3,4,5,6,7,8,9]
+const arr = [1,2,3,4,5,6,8,9,10];
+const ages =[1,2,3,4,5,6,7,8,9,10]
 
-// traditional
-for(let i = 0; i<arr.length; i++){
-  console.log(`traditional for loop ${arr[i]}`);
+//traditional
+for (let i = 0; i<arr.length; i ++){
+  console.log('traditional ', arr[i]);
 }
+
+//non traditional
 for (let i in arr){
-
-  console.log(`non traditional ${arr[i]}`)
+  console.log('for i in ', arr[i]);
 }
 
-let idx = 0;
-
-while(idx<10){
-
-  console.log(`while loop ${arr[idx]}`);
+//while
+let idx = 0
+while(idx<arr.length){
+  console.log('while loop ', arr[idx]);
   idx ++;
 }
-do {
-  console.log(`do while ${arr[idx - 10]}`);
+idx = 0;
+do{
+  console.log('do while ', arr[idx])
   idx ++;
 }
-while(idx<20);
-
+while(idx<9)
 //------------Arrays---------------//
 //map applies a call back to each index and returns an array of all the results
 function map(arr, cb){
@@ -78,7 +78,9 @@ reduce(arr,cbReduce);
 //------------Objects--------------//
 
 const people = ['Kookla','Fran','Ollie'];
-const newPeople = ['Odie',...people,'Garfield'];
+// const newPeople = ['Odie',...people,'Garfield'];
+
+const newPeople =['Odie', ...people, 'Garfield'];
 
 
 console.log(newPeople);
@@ -88,9 +90,13 @@ const stuff = {
   toothbrush: 'frayed',
   cars: ['Toyota','Mazda']
 }
-const {tv,radio,toothbrush, cars} = stuff;
 
-cars.push('new Car');
+
+const{tv,radio,toothbrush,cars} = stuff;
+
+cars.push('new car');
+
+
 console.log(stuff);
 
 const state ={people: people, stuff: stuff};
