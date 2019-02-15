@@ -5,7 +5,7 @@ const ages =[1,2,3,4,5,6,7,8,9,10]
 
 //traditional
 for (let i = 0; i<arr.length; i ++){
-  console.log('traditional ', arr[i]);
+  console.log('for loop ', arr[i]);
 }
 
 //non traditional
@@ -27,6 +27,7 @@ do{
 while(idx<9)
 //------------Arrays---------------//
 //map applies a call back to each index and returns an array of all the results
+
 function map(arr, cb){
   const mapArr =[];
   for (let i in arr){
@@ -78,7 +79,6 @@ reduce(arr,cbReduce);
 //------------Objects--------------//
 
 const people = ['Kookla','Fran','Ollie'];
-// const newPeople = ['Odie',...people,'Garfield'];
 
 const newPeople =['Odie', ...people, 'Garfield'];
 
@@ -88,20 +88,17 @@ const stuff = {
   tv: 'huge',
   radio: 'old',
   toothbrush: 'frayed',
-  cars: ['Toyota','Mazda']
+  cars: ['chevy','Mazda']
 }
-
-
 const{tv,radio,toothbrush,cars} = stuff;
 
 cars.push('new car');
-
 
 console.log(stuff);
 
 const state ={people: people, stuff: stuff};
 
-const newState={people: ['new Odie', ...state.people, 'new Garfield'],
+const newState={people: ['new Odie', ...state.people, 'new garfield'],
 stuff: state.stuff,
 }
 
